@@ -35,3 +35,7 @@ https://github.com/kubernetes-client/java/
 
 https://kubernetes.io/docs/tasks/access-application-cluster/access-cluster/
 https://github.com/kubernetes/kubernetes/issues/17404
+
+-----
+configmaps
+http://thrawn01.org/posts/2016/03/22/howto-write-configmap-enabled-golang-microservices/
