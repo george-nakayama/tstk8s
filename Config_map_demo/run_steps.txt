@@ -1,0 +1,33 @@
+- Create a configmap
+kubectl create -f kubernetes-configmap.yaml 
+
+- Inspect Configmap
+kubectl describe configmaps
+
+- Create a replication controller
+kubectl create -f kubernetes-rc.yaml
+
+- Create a service to be able to connect to the application from outside cluster
+kubectl create -f kubernetes-service.yaml
+
+- Check the service and port
+kubectl get svc
+
+- Check de pods and verify if it is ready
+kubectl get pods
+
+- Get cluster master IP address
+kubectl cluster-info
+
+- Make a request to application
+curl http://{master_ip}:{service_port}
+
+** Make a change in configmap **
+- replace the configmap with new one
+kubectl replace -f kubernetes-configmap.yaml
+
+- Check the changes
+kubectl get configmap configmap-microservice-demo -o yaml
+
+- Make a request to application and verify it was changed
+curl http://{master_ip}:{service_port}

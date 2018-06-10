@@ -1,0 +1,37 @@
+Connect to nodes 
+https://github.com/sobotklp/kubernetes-redis-cluster
+
+Get pod name 
+kubectl get pods
+
+To connect to node
+kubectl exec -it {pod_nmae} /bin/sh
+
+To get pod log
+kubectl logs -f {pod_name}
+
+-----------
+
+- To open api url
+
+kubectl cluster-info
+
+Get master ip
+
+kubectl get svc
+
+Get port number
+
+Make a url like this
+
+http://{master_ip}:{svc_port}
+
+---------
+
+Java API for k8s
+https://github.com/kubernetes-client/java/
+
+-----
+
+https://kubernetes.io/docs/tasks/access-application-cluster/access-cluster/
+https://github.com/kubernetes/kubernetes/issues/17404
